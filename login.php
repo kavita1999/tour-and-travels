@@ -12,19 +12,19 @@
        
             $s=mysql_query("select * from userreg where username='$u' and password='$pas'");
             
-                //$m=mysql_num_rows($s);
+                $m=mysql_num_rows($s);
             
         $aa=mysql_fetch_assoc($s);
             
        
                 
-              if($aa['status']=='admin' //and $m==1)
+              if($aa['status']=='admin' and $m==1)
               {
                   
                   header("location: adminchange.php");
                   
               }
-                else if($aa['status']=='user' //and $m==1)
+                else if($aa['status']=='user' and $m==1)
                     
                 {
                     
